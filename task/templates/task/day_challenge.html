@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <style>html,
+body {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	background: linear-gradient(45deg, #49a09d, #5f2c82);
+	font-family: sans-serif;
+	font-weight: 100;
+}
+
+.container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+table {
+	width: 800px;
+	border-collapse: collapse;
+	overflow: hidden;
+	box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+th,
+td {
+	padding: 15px;
+	background-color: rgba(255,255,255,0.2);
+	color: #fff;
+}
+
+th {
+	text-align: left;
+}
+
+thead {
+	th {
+		background-color: #55608f;
+	}
+}
+
+tbody {
+	tr {
+		&:hover {
+			background-color: rgba(255,255,255,0.3);
+		}
+	}
+	td {
+		position: relative;
+		&:hover {
+			&:before {
+				content: "";
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: -9999px;
+				bottom: -9999px;
+				background-color: rgba(255,255,255,0.2);
+				z-index: -1;
+			}
+		}
+	}
+}</style>
+    <title>Title</title>
+</head>
+<body>
+<h2></h2>
+
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+ <a class="navbar-brand" href="#">ManthanApp</a>
+  <a class="navbar-brand" href="home">Home</a>
+    <a class="navbar-brand" href="#">ChallengeYourself {{request.user}}</a>
+</nav>
+<br>
+<br>
+  <div class="container">
+      <br><br><br><br><br>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Day</th>
+                  <th>Title</th>
+                  <th>Content</th>
+                  <th>Completed</th>
+                    <th>Action</th>
+                </tr>
+              </thead>
+
+              <tbody>
+
+              {% for task in Tasks %}
+                <tr>
+                    <td>{{task.id}}</td>
+                    <td>{{task.title}}</td>
+                    <td>{{task.content}}</td>
+                    <td>
+                    {% if task.completed == True%}
+                    ✅
+                    {%else%}
+                    🕒
+                    {%endif%}
+                  </td>
+
+                  <td>
+                      {% if task.completed == True %}
+                      <a href="#">Completed</a>
+                      {% else %}
+                      <a onclick="alert('Day{{task.id}} Completed')" href="/update/{{task.id}}">Complete Task|2 Points</a>
+                      {% endif %}
+                  </td>
+                </tr>
+              {% endfor %}
+
+
+              </tbody>
+            </table>
+          </div>
+
+
+
+
+
+
+</body>
+</html>
