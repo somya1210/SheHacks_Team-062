@@ -21,4 +21,5 @@ urlpatterns = [
     path('journal/', include('journal.urls')),
     path('', include('mood.urls')),
     path('quiz/', include('quiz.urls')),
+    path('task/',include('task.urls'))
 ]

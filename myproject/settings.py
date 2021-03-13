@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'register',
     'mood',
     'quiz',
+    'task'
 ]
 
 MIDDLEWARE = [

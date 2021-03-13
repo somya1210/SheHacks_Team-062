@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <style>
+body, html {
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+.bg-img {
+  /* The image used */
+  background-image: url("static/images/image3.jpg");
+  min-height: 380px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+ .content {
+  position:absolute;
+  bottom:0;
+  left:0;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  width: 70%;
+  padding: 20px;
+}
+.container {
+  position: absolute;
+  right: 0;
+  margin: 0px;
+  max-width: 350px;
+  padding: 5px;
+  background-color: #4EE2EC;
+}
+
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 0px 0 16px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit button */
+.btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+</style>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+ <a class="navbar-brand" href="#">ManthanApp</a>
+  <a class="navbar-brand" href="home">Home</a>
+    <a class="navbar-brand" href="userform">Login</a>
+</nav>
+
+ <div class="bg-img">
+
+<form action="registration" method="post" class="container">
+
+
+        {% csrf_token %}
+
+
+        <label >UserName</label>
+        <input type="text" name="username" placeholder="User Name">
+        <label >Email</label>
+        <input type="text" name="email" placeholder="Email">
+        <label >Password</label>
+        <input type="password" name="password1" placeholder="Password">
+        <label >Re-enter Password</label>
+        <input type="password" name="password2" placeholder="Confirm Password"><br>
+
+        <button type="submit" class="btn btn-primary">Sign Up</button>
+</form>
+          <div class="content">
+    <h1>Start Your Journey</h1>
+    <p>Experience the change within you and explore more about your life.</p>
+  </div>
+
+
+ </div>
+
+<div>
+  {% for message in messages %}
+
+  <h3>  {{message}}</h3>
+
+  {% endfor %}
+</div>
+</body>
+</html>
