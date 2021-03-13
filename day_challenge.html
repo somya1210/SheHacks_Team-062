@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Tasks to be done by user</h2>
+
+
+  <div>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Title</th>
+                  <th>Content</th>
+                  <th>Completed</th>
+                    <th>Action</th>
+                </tr>
+              </thead>
+
+              <tbody>
+
+              {% for task in Tasks %}
+                <tr>
+                    <td>{{task.id}}</td>
+                    <td>{{task.title}}</td>
+                    <td>{{task.content}}</td>
+                    <td>
+                    {% if task.completed == True%}
+                    ✅
+                    {%else%}
+                    🕒
+                    {%endif%}
+                  </td>
+
+                  <td>
+                      {% if task.completed == True %}
+                      <a href="#">Completed</a>
+                      {% else %}
+                      <a onclick="alert('Day{{task.id}} Completed')" href="/update/{{task.id}}">Complete Task|2 Points</a>
+                      {% endif %}
+                  </td>
+                </tr>
+              {% endfor %}
+
+
+              </tbody>
+            </table>
+          </div>
+
+
+
+
+
+
+</body>
+</html>
