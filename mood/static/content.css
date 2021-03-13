@@ -1,0 +1,96 @@
+.content {
+    grid-column: 7 / 25;
+    grid-row: 2 / 30;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.center-mode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.registration-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 60%;
+}
+
+.hi-block {
+    position: relative;
+    margin: 10px;
+
+    width: 30%;
+    width: 90%; 
+    background-color: #ddeef6;
+    border-radius: 20px;
+
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+.umbrella-cat {
+    position: absolute;    
+    right: 0px;
+    bottom: 0px;
+    width: 25%;
+    opacity: 0.8;
+}
+
+.task-holder, .task-adder {
+    flex-wrap: wrap;
+    margin: 10px;
+
+    display: flex;
+}
+
+.task-block {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    flex-grow: 0.4;
+    margin: 10px;
+    padding: 10px;
+    transition: 0.2s linear 0s;
+}
+
+.word-cloud-wrapper {
+    width: 90%;    
+    height: 50%;
+}
+
+.word-cloud-image {
+    width: 100%;
+    object-fit: cover;
+}
+
+.task-add {
+    transition: 0.2s linear 0s;
+    background-color: #ddeef6;
+    display: flex;
+}
+
+.task-add:hover {
+    background-color: #a5d1e7;
+}
+
+.task-name-wrapper {
+    width: 60%;
+}
+
+.task-img {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    height: 60%;
+}
+
+.graph-holder {
+    margin-top: 40px;
+    margin-right: 10%;
+}
