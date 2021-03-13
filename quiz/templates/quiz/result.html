@@ -12,13 +12,15 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="{% static 'result.css' %}">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Redressed&display=swap" rel="stylesheet">
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <div class="scores">
-        <p id="scores"> Your score</p><br>
+        <p id="scores"> Your Score</p><br>
         </div>
         <div class="score">
             
@@ -45,12 +47,23 @@
 			<div class="card__face card__face--back">
 				<div class="card__content">
 					<div class="card__header">
-						<img src="pp.jpg" alt="" class="pp" />
+						<img src="{% static 'mind.jpg' %}" alt="" class="pp" />
 						
 					</div>
 					<div class="card__body">
 						
-                        <p></p>
+                        <ul>
+                        <li>Meet yourself where you are</li>
+                        <li>Work on your strengths</li>
+                        <li>If you need to wallow, wallow — but do so constructively</li>
+                        <li>Know that today isn’t indicative of tomorrow</li>
+                        <li>Do the opposite of what the ‘depression voice’ suggests</li>
+                        <li>Reward your efforts</li>
+                        <li>Incorporating meditation may help ground your thoughts</li>
+                        <li>What you eat and drink can also affect how you feel</li>
+                        <li>Do things that make you happy. Sometimes, we don't need to add new activities to get more pleasure.</li>
+                        <li>If you’re up for exercise, consider a walk around the block</li>
+                        </ul>
 					</div>
 				</div>
 			</div>
