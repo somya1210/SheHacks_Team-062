@@ -6,6 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dear Diary</title>
+      <style>
+.button {
+  background-color: Brown; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 30px;
+}</style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css" />
 </head>
 
@@ -13,9 +25,11 @@
     <section class="hero is-primary">
         <div class="hero-body">
             <div class="container">
+                <span style='font-size:30px;'>&#128221;</span>
                 <h1 class="title">
-                    Dear Diary
+                    {{request.user}} How was your Day
                 </h1>
+
             </div>
         </div>
     </section>
@@ -30,11 +44,10 @@
                     </div>
                 </div>
 
-                <div class="field is-grouped is-grouped-right">
-                    <div class="control">
-                        <button class="button is-link">Submit</button>
-                    </div>
-                </div>
+
+                        <button type="submit" class="button">Submit</button>
+
+
         </form>
         </div>
 

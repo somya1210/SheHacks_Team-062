@@ -36,7 +36,7 @@ def register(request):
                messages.info(request, "USERNAME TAKEN!")
                return redirect('/registration')
            else:
-                user=User.objects.create_user(username=username,password=password1,email=email,first_name=first_name,last_name=last_name)
+                user=User.objects.create_user(username=username,password=password1,email=email)
                 user.save();
                 return redirect('/userform')
        else:
@@ -63,3 +63,9 @@ def update(request,pk):
 
 def helpline(request):
     return render(request,'task/helpline.html')
+def disease(request):
+     return render(request,'task/disease.html')
+def Team(request):
+    return render(request,'task/Team.html')
+def doctor(request):
+    return render(request,'task/doctor.html')

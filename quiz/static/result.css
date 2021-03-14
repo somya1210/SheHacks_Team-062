@@ -27,6 +27,16 @@ body {
   height: 800px;
   perspective: 1000px;
 }
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
 
 .card__inner {
   width: 100%;
@@ -116,7 +126,7 @@ body {
 
 .card__body {
   padding: 30px;
-  
+
 }
 
 .card__body h3 {
@@ -144,7 +154,7 @@ body {
     background-color: rgb(150, 245, 255);
     border-radius: 16px;
     height:200px;
-  
+
 }
 .scores{
   font-size: 60px;
@@ -155,20 +165,20 @@ body {
 
 }
 
-.result { 
+.result {
   /* margin-top: 300px;  */
-  /* display: block; 
+  /* display: block;
   position: absolute;  */
   margin-top: 20px;
-  width: 150px; 
-  height: 150px; 
-  border-radius: 50%; 
-  background-image: conic-gradient( 
-      hsl(130, 85%, 41%) 126deg,  
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-image: conic-gradient(
+      hsl(130, 85%, 41%) 126deg,
       /* lightblue 0 235deg,   */
-      hsl(14, 94%, 51%) 0); 
+      hsl(14, 94%, 51%) 0);
   border: white;
-} 
+}
 .dep{
   font-size: xx-large;
 
