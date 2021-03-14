@@ -1,159 +1,309 @@
-
-<!DOCTYPE html>
 {% load static %}
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
-<head>
+  <head>
     <meta charset="utf-8">
     <title> Dashboard</title>
-    <style>
-    body{
-  margin:0;
-  padding:0;
-  font-family:"Roboto",sans-serif;
-}
-header{
-  position:fixed;
-  background:#023034;
-  padding:20px;
-  width:100%;
-  height:30px;
-}
-.left_area h3{
-  color:#fff;
-  margin:0;
-  text-transform: uppercase;
-  font-size:22px;
-  font-weight:900;
-}
-.left_area span{
-  color:#07CFE1;
-}
-.logout_btn{
+<style>body{
+    margin:0;
+    padding:0;
+    font-family:"Roboto",sans-serif;
+  }
+  header{
+    position:fixed;
+    background:black;
+    padding:20px;
+    width:100%;
+    height:30px;
+  }
+  .left_area h3{
+    color:#fff;
+    margin:0;
+    text-transform: uppercase;
+    font-size:22px;
+    font-weight:900;
+  }
+  .left_area span{
+    color:#07CFE1;
+  }
+  #logout_btn{
 
-  padding:5px;
-  background:#19B3D3;
-  text-decoration:none;
+    padding:5px;
 
 
-  float:right;
-  margin-top:-30px;
-  margin-right:40px;
-  border-radius:2px;
-  font-size:15px;
-  font-weight:600;
-  color:#fff;
-  transition:0.5s;
-  transition-property:background;
+    float:right;
+    margin-top:-30px;
+    margin-right:40px;
+    border-radius:2px;
+    font-size:15px;
+    font-weight:600;
+    color:#fff;
+    transition:0.5s;
+    transition-property:background;
+
+  }
+  .right_area{
+      color: white;
+  }
+
+  .sidebar{
+    background: #2F323A;
+    margin-top: 70px;
+    padding-top: 30px;
+    position: fixed;
+    left: 0;
+    width:250px;
+    height:100%;
+    transition: 0.5s;
+    transition-property: left;
+  }
+  .sidebar .profile-image{
+    width: 50%;
+    height: 50%;
+    border-radius: 100px;
+    margin-bottom: 10px;
+  }
+  .sidebar h4{
+    color: #ccc;
+    margin-top: 0;
+    margin-bottom: 20px;
+
+  }
+  .sidebar a{
+    color: #fff;
+    display:block;
+    width:100%;
+    line-height: 60px;
+    text-decoration: none;
+    padding-left: 40px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    transition-property: background;
+  }
+  .sidebar a:hover{
+    background: #19B3D3;
+  }
+  .sidebar i{
+    padding-right: 10px;
+
+  }
+  label #sidebar_btn{
+    z-index: 1;
+    color:#fff;
+    position:fixed;
+    cursor: pointer;
+    left:300px;
+    font-size:20px;
+    margin: 5px 0;
+    transition: 0.5s;
+    transition-property: color;
+  }
+  label #sidebar_btn:hover{
+    color:#19B3D3;
+
+  }
+  #check:checked ~ .sidebar{
+    left:-190px;
+
+  }
+  #check:checked ~ .sidebar a span{
+    display:none;
+  }
+
+  #check:checked ~.sidebar a{
+    font-size:20px;
+    margin-left: 170px;
+    width:80px;
+
+  }
+  .logo{
+      margin-top: 80px;
+      margin-left: 400px;
+  }
+  .card{
+    width: 100%;
+    display: inline-block;
+    box-shadow: 2px 2px 20px black;
+    border-radius: 5px;
+    margin: 2%;
+    background-color: rgb(255, 234, 97);
+   }
+
+.image{
+    margin-left: auto;
+margin-right: auto;
+text-align:center;
+}
+.image img{
+ width: 50%;
+ height:50%;
+ padding: 20px;
+ /* border-top-right-radius: 5px;
+ border-top-left-radius: 5px;
+  */
+
 
 }
-.logout_btn:hover{
-  background:#0D9DBB;
+
+.title{
+
+ text-align: center;
+ padding: 10px;
 
 }
-.sidebar{
-  background: #2F323A;
-  margin-top: 70px;
-  padding-top: 30px;
-  position: fixed;
-  left: 0;
-  width:250px;
-  height:100%;
-  transition: 0.5s;
-  transition-property: left;
-}
-.sidebar .profile-image{
-  width: 50%;
-  height: 50%;
-  border-radius: 100px;
-  margin-bottom: 10px;
-}
-.sidebar h4{
-  color: #ccc;
-  margin-top: 0;
-  margin-bottom: 20px;
 
+.title h1{
+ font-size: 20px;
 }
-.sidebar a{
-  color: #fff;
-  display:block;
-  width:100%;
-  line-height: 60px;
+
+.des{
+ padding: 3px;
+ text-align: left;
+
+ padding-top: 10px;
+ border-bottom-right-radius: 5px;
+ border-bottom-left-radius: 5px;
+ margin-left: 50px;
+ font-size: 20px;
+}
+button{
+ margin-top: 40px;
+ margin-bottom: 15px;
+ background-color: rgb(150, 245, 255);
+ border: 2px solid #19B3D3;
+
+ border-radius: 5px;
+ padding:10px;
+ margin-left: 130px;
+ width: 100px;
+ font-size: 15px;
+}
+button:hover{
+ background-color: black;
+ color: white;
+ transition: .5s;
+ cursor: pointer;
+}
+
+
+.main{
+    display: flex;
+    margin: 2%;
+    margin-left: 250px;
+   }
+   .button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
   text-decoration: none;
-  padding-left: 40px;
-  box-sizing: border-box;
-  transition: 0.5s;
-  transition-property: background;
+  display: inline-block;
+  font-size: 16px;
 }
-.sidebar a:hover{
-  background: #19B3D3;
-}
-.sidebar i{
-  padding-right: 10px;
-
-}
-label #sidebar_btn{
-  z-index: 1;
-  color:#fff;
-  position:fixed;
-  cursor: pointer;
-  left:300px;
-  font-size:20px;
-  margin: 5px 0;
-  transition: 0.5s;
-  transition-property: color;
-}
-label #sidebar_btn:hover{
-  color:#19B3D3;
-
-}
-#check:checked ~ .sidebar{
-  left:-190px;
-
-}
-#check:checked ~ .sidebar a span{
-  display:none;
-}
-
-#check:checked ~.sidebar a{
-  font-size:20px;
-  margin-left: 170px;
-  width:80px;
-
-}
-</style>
-
-
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-</head>
-<body>
-    <input type="checkbox" id="check">
+   .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #19B3D3;
+    color: white;
+    text-align: center;
+ }</style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  </head>
+  <body>
 
     <header>
-      <label for="check">
+      {% comment %} <label for="check">
         <i class="fas fa-bars" id="sidebar_btn"></i>
-      </label>
+      </label> {% endcomment %}
       <div class="left_area">
         <h3>
-          MANTHAN  <span>APP</span>
+          MAN<span>THAN</span>
         </h3>
       </div>
       <div class="right_area">
-        <a href="logout" class="logout_btn">LOGOUT</a>
+       <a href="#" id="logout_btn"><i class="fa fa-sign-out " aria-hidden="true" style="color: white;"></i><span style="color: white;">LOGOUT</span></a>
+
 
       </div>
     </header>
     <div class="sidebar">
       <center>
-        <img src="{% static 'images/minion.jpg' %}" class="profile-image" alt="">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/768px-User_icon_2.svg.png" class="profile-image" alt="">
         <h4>
           Hello {{request.user}}
         </h4>
       </center>
-      <a href="#"><i class="fas fa-desktop"></i><span> Dashboard</span></a>
-      <a href="day_challenge"><i class="fas fa-cogs"></i><span> Take Challenge!</span></a>
-      <a href="books"><i class="fas fa-table"></i><span> Music/Books for you</span></a>
-      <a href="helpline"><i class="fas fa-info-circle"></i><span>HelpLine Numbers</span></a>
-      <a href="#"><i class="fas fa-sliders-h"></i><span> Settings</span></a>
+      <h2><a href="#"><i class="fas fa-desktop"></i><span> Dashboard</span></a></h2>
+        <a href="disease"><i class="fas fa-table"></i><span>Symptom</span></a>
+      <a href="doctor"><i class="fas fa-stethoscope"></i><span>Consult</span></a>
+      <a href="helpline"><i class="fas fa-phone"></i><span>Helpline</span></a>
+
+      <a href="MeetTheTeam"><i class="fas fa-envelope"></i><span>MeetTheTeam</span></a>
     </div>
+
+    <div class="rightbar">
+    <img src="{% static 'images/logo.png' %}" class="logo" alt="">
+
+    </div>
+<div class="main">
+
+
+
+
+    <div class="card">
+
+<div class="image">
+   <img src="{% static 'images/journal.jpg' %}">
+</div>
+<div class="title">
+ <h1>Journal</h1>
+</div>
+<div class="des">
+
+
+</div>
+        <a href="journal" class="button">WriteYourDay</a>
+</div>
+
+ <div class="card">
+<div class="image">
+   <img src="{% static 'images/challenge.png' %}">
+</div>
+<div class="title">
+ <h1>Take 21 days challenge</h1>
+</div>
+<div class="des">
+
+
+</div>
+<a href="day_challenge" class="button">Take Challenge</a>
+</div>
+
+
+
+    <div class="card">
+
+<div class="image">
+   <img src="{% static 'images/dep.png' %}">
+</div>
+<div class="title">
+ <h1>SurveyTest</h1>
+</div>
+<div class="des">
+
+
+</div>
+<a href="quiz" class="button">Survey</a>
+    </div>
+
+
+</div>
+<br><br>
+<div class="footer">
+  <p>Created by Team Rising Heights</p>
+</div>
   </body>
 </html>
