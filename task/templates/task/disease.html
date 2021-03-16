@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width,initial-scale=1.0" >
+    <style>
+
+
+body{
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+  background: #16384c;
+}
+.container{
+  position:relative;
+  height: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items:center;
+  flex-wrap:wrap;
+  padding:30px;
+}
+.container .card{
+  max-width: 300px;
+  height: 230px;
+
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+
+
+  background: #fff;
+  margin:30px 10px;
+  padding:20px 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+  transition: 0.3s ease-in-out;
+}
+.container .card:hover{
+  height:420px;
+}
+.container .card .imgBx{
+  position: relative;
+  width: 260px;
+  height: 260px;
+  top:-60px;
+  left:20px;
+  z-index:1;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+
+
+}
+.container .card .imgBx img{
+  max-width: 100%;
+  border-radius:4px;
+
+}
+.container .card .content{
+  position: relative;
+  margin-top: -140px;
+  padding: 10px 15px;
+  text-align: center;
+  color:#111;
+  visibility: hidden;
+  opacity:0;
+  transition:0.3s ease-in-out;
+}
+.container .card:hover .content{
+  visibility:visible;
+  opacity: 1;
+  margin-top: -40px;
+  transition-delay: 0.3s;
+}
+.header {
+    font-size: 3rem;
+    position:relative;
+    bottom:700px;
+    left:15px;
+    color:white;
+
+
+}
+
+.gray {
+  position: relative;
+  bottom: 500px;
+  right:150px;
+    font-weight: light;
+    color: gray;
+    font-size: 1.5rem;
+}
+</style>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+  </head>
+  <body>
+
+    <p class="header"> Mental Diseases</p>
+    <p class="gray">If you notice some of the following symptoms,you should probably see a doctor</p>
+
+
+
+
+    <div class="container">
+      <div class="card">
+        <div class="imgBx">
+          <img  src="static/images/depressed.jpg"></div>
+          <div class="content">
+            <h2>Depression</h2>
+            <p>Feelings of helplessness and hopelessness. A bleak outlook—nothing will ever get better and there’s nothing
+               you can do to improve your situation. Loss of interest in daily activities.. Feeling fatigued, sluggish, and physically drained.
+               Your whole body may feel heavy, and even small tasks are exhausting or take longer to complete.Self-loathing.</p>
+            </div></div>
+          <div class="card">
+            <div class="imgBx">
+              <img src="static/images/bipolar.jpg"></div>
+              <div class="content">
+                <h2>Bipolar</h2>
+                <p>Feeling unusually “high” and optimistic OR extremely irritable.Unrealistic, grandiose beliefs about one’s
+                   abilities or powers.Sleeping very little, but feeling extremely energetic.Talking so rapidly that others can’t keep up.
+                   Racing thoughts; jumping quickly from one idea to the next.
+                  </p>
+                </div>
+            </div>
+            <div class="card"><div class="imgBx"><img  src="static/images/corona.jpg"></div>
+            <div class="content">
+              <h2>Coronavirus Anxiety</h2>
+                <p>It’s a frightening time. We’re in the midst of a worldwide pandemic, with many places at least partially
+                  shut down,others struggling to reopen safely. Some of us are in areas where the coronavirus infection
+                  rates are getting worse.
+                  </p>
+                </div>
+
+              </div>
+
+          <div class="card">
+            <div class="imgBx">
+              <img  src="static/images/ocd.jpg"></div>
+              <div class="content">
+                <h2>Obsessive Compulsive Disorder</h2>
+                <p>Excessive double-checking of things, such as locks, appliances, and switchesRepeatedly
+                  checking in on loved ones to make sure they’re safeCounting, tapping, repeating certain words,
+                   or doing other senseless things to reduce anxiety</p>
+                </div></div>
+              <div class="card"><div class="imgBx">
+                <img  src="static/images/panics.jpg"></div>
+                <div class="content">
+                  <h2>Panic Attack</h2>
+                  <p>Shortness of breath or hyperventilation Heart palpitations or racing heart,chest pain
+                    or discomfort,trembling or shaking,choking feeling,feeling unreal or detached from your
+                    surroundings,sweating,nausea or upset stomach</p>
+                  </div></div>
+                <div class="card"><div class="imgBx">
+                  <img  src="static/images/burnout.jpg"></div>
+                  <div class="content">
+                    <h2>Burnout</h2>
+                    <p>Feeling tired and drained most of the time.Lowered immunity, frequent illnesses.
+                      Frequent headaches or muscle pain.Change in appetite or sleep habits.
+                      Sense of failure and self-doubt.Feeling helpless, trapped, and defeated.Detachment,
+                      feeling alone in the world.Loss of motivation.</p>
+
+                    </div></div>
+                    <div class="card">
+                    <div class="imgBx">
+                      <img  src="static/images/racism.jpg"></div>
+                      <div class="content">
+                        <h2>Racism</h2>
+                        <p>Not only does racism trigger mental health problems such as depression, anxiety, and trauma,
+                           it also adds barriers to getting help. For many black people or minorities there’s a great disparity
+                            in access to mental health resources. Even if you have access to a doctor or therapist,
+                          you may still encounter discrimination within the health care system itself.</p>
+                        </div></div>
+                      <div class="card"><div class="imgBx">
+                        <img  src="static/images/depressed.jpg"></div>
+                        <div class="content">
+                          <h2>Suicide</h2>
+                          <p>Feeling suicidal is not a character defect, and it doesn’t mean that you are crazy, or weak, or flawed.
+                            It only means that you have more pain than you can cope with right now. But with time and support,
+                            you can overcome your problems and the pain and suicidal feelings will pass.</p>
+                          </div></div>
+                        <div class="card"><div class="imgBx">
+                          <img  src="static/images/social.jpg"></div>
+                          <div class="content">
+                            <h2>Social Media</h2>
+                            <p>Spending more time on social media than with real world friends.
+                               Using social media has become a substitute for a lot of your offline social interaction.
+                               Even if you’re out with friends, you still feel the need to constantly check social media, often driven by
+                                feelings that others may be having more fun than you.Comparing yourself unfavorably with others on social media.
+                               You have low self-esteem or negative body image. </p>
+                            </div></div></div>
+  </body>
+  </html>

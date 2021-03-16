@@ -1,9 +1,10 @@
+
 {% load static %}
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> --<![endif]-->
 <html>
     <head>
         <meta charset="utf-8">
@@ -11,17 +12,241 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="{% static 'result.css' %}">
+<!--        <link rel="stylesheet" href="{% static 'result.css' %}">-->
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Redressed&display=swap" rel="stylesheet">
+        <style>
+            :root {
+  --primary: #FFCE00;
+  --secondary: #FE4880;
+  --dark: #212121;
+  --light: #F3F3F3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: montserrat, sans-serif;
+  width: 100%;
+  min-height: 100vh;
+  /* background-image: url('download (1).jpg');
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain; */
+  /* background-position: -300px 100px; */
+
+}
+.bg-image {
+  /* Full height */
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.img1 { background-image: url("/static/images/image7.jpg"); }
+{% comment %} .body{
+  background-image: url("static/images/image7.jpg");
+   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} {% endcomment %}
+.card {
+  margin: 100px auto 0;
+  width: 650px;
+  height: 800px;
+  perspective: 1000px;
+}
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-left: 600px;
+}
+
+.card__inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+}
+
+.card__inner.is-flipped {
+  transform: rotateY(180deg);
+}
+
+
+.card__face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
+}
+
+.card__face--front {
+  background-image: linear-gradient(to bottom right, var(--primary), var(--secondary));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* overflow: scroll; */
+}
+
+.card__face--front h1 {
+  color:black;
+  font-size: 40px;
+  font-family: 'Redressed';
+}
+
+.card__face--back {
+  background-color: var(--light);
+  transform: rotateY(180deg);
+}
+
+.card__content {
+  width: 100%;
+  height: 100%;
+}
+
+.card__header {
+  position: relative;
+  padding: 30px 30px 40px;
+}
+
+.card__header:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(to bottom left, var(--primary) 10%, var(--secondary) 115%);
+  z-index: -1;
+  border-radius: 0px 0px 50% 0px;
+}
+
+.pp {
+  display: block;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 30px;
+  border-radius: 50%;
+  background-color: #FFF;
+  border: 5px solid #FFF;
+  object-fit: cover;
+}
+
+.card__header h2 {
+  color: #FFF;
+  font-size: 32px;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.card__body {
+  padding: 30px;
+
+}
+
+.card__body h3 {
+  color: var(--dark);
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.card__body p {
+  color: var(--dark);
+  font-size: 18px;
+  line-height: 1.4;
+}
+.score{
+  /* display: inline-block; */
+  text-align: center;
+  width: 70%;
+  display: flex;
+    /* border: 1px solid black; */
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin-left: 200px;
+    background-color: rgb(242, 153, 215);
+    border-radius: 16px;
+    height:200px;
+
+}
+.scores{
+  font-size: 60px;
+  text-align: center;
+  padding: 30px;
+  font-weight: bold;
+  font-family: 'Redressed';
+
+}
+
+.result {
+  /* margin-top: 300px;  */
+  /* display: block;
+  position: absolute;  */
+  margin-top: 20px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-image: conic-gradient(
+      hsl(130, 85%, 41%) 126deg,
+      /* lightblue 0 235deg,   */
+      hsl(14, 94%, 51%) 0);
+  border: white;
+}
+.dep{
+  font-size: xx-large;
+
+}
+.value{
+  font-size: 25px;
+  margin-left: -50px;
+  margin-top: 70px;
+}
+
+li{
+  font-size: 30px;
+  font-family: 'Redressed';
+}
+/* body,
+.result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+        </style>
     </head>
     <body>
+    <div class="bg-image img1">
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <div class="scores">
-        <p id="scores"> Your score</p><br>
+        <p id="scores"> Your Score</p><br>
         </div>
         <div class="score">
-            
+
             <div class="result">
             <p class="value">6.5/10</p>
             </div>
@@ -29,38 +254,51 @@
             <br><br>
             <p>Moderate Depression</p>
             </div>
-            
+
 
         </div>
-       
+
         <div class="card">
 		<div class="card__inner">
 			<div class="card__face card__face--front">
 				<h1>Some tips</h1><br>
                  {% comment %} <h4>Click here</h4> {% endcomment %}
                 </div>
-               
 
-			
+
+
 			<div class="card__face card__face--back">
 				<div class="card__content">
 					<div class="card__header">
-						<img src="pp.jpg" alt="" class="pp" />
-						
+						<img src="{% static 'images/mind.jpg' %}" alt="" class="pp" />
+
 					</div>
 					<div class="card__body">
-						
-                        <p></p>
+
+                        <ul>
+                        <li>Meet yourself where you are</li>
+                        <li>Work on your strengths</li>
+                        <li>If you need to wallow, wallow — but do so constructively</li>
+                        <li>Know that today isn’t indicative of tomorrow</li>
+                        <li>Do the opposite of what the ‘depression voice’ suggests</li>
+                        <li>Reward your efforts</li>
+                        <li>Incorporating meditation may help ground your thoughts</li>
+                        <li>What you eat and drink can also affect how you feel</li>
+                        <li>Do things that make you happy. Sometimes, we don't need to add new activities to get more pleasure.</li>
+                        <li>If you’re up for exercise, consider a walk around the block</li>
+                        </ul>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	
-       <a href ="/doctor"> <button >Consult a doctor</button></a>
+<br>
+       <a href ="/doctor" class="button" >Consult a doctor</a>
+
+       </div>
 
 <script >
-      
+
 const card = document.querySelector(".card__inner");
 
 card.addEventListener("click", function (e) {

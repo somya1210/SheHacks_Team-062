@@ -6,11 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dear Diary</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css" />
+
+<style>
+body {
+  font-size: 20px;
+}
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 30px;
+}
+p.thick {
+  font-weight: bold;
+  color: Brown
+}</style>
+
 </head>
 
 <body>
-    <section class="hero is-primary">
+
+<section class="hero is-primary">
         <div class="hero-body">
             <div class="container">
                 <h1 class="title">
@@ -20,13 +42,16 @@
         </div>
     </section>
 
+
+
+
     <section class="section">
         <div class="container">
 
             <article class="media">
                 <div class="media-content">
                     <div class="content">
-                        <a href="{% url 'add' %}">Add new entry</a>
+                        <a class="button" href="{% url 'add' %}">Add new entry</a>
                     </div>
                 </div>
             </article>
@@ -36,9 +61,10 @@
                     <div class="media-content">
                         <div class="content">
                             <p>
-                                <strong>{{entry.name}}</strong>
-                                <strong>{{ entry.date_posted }}</strong>
-                                <br> {{ entry.text }}
+                                <span style='font-size:60px;'>&#128519;</span>
+                                <strong>{{entry.name}} Your Day on</strong>
+                                <strong>{{ entry.date_posted }} was like:</strong>
+                                <br><br> <p class="thick" align="center" >Dear Diary,{{ entry.text }} </p>
                             </p>
                         </div>
                     </div>
@@ -48,6 +74,7 @@
         </div>
 
     </section>
+</div>
     <footer class="footer">
     </footer>
 </body>
