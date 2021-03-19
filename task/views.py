@@ -69,3 +69,13 @@ def Team(request):
     return render(request,'task/Team.html')
 def doctor(request):
     return render(request,'task/doctor.html')
+
+def progress(request):
+    task=Task.objects.all()
+    count=0
+    for t in task:
+        if(t.completed == True):
+            count+=1
+    rewards=2*count
+    context={'count':count,'rewards':rewards}
+    return render(request,'task/progress.html',context)
